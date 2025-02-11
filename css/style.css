@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #5c3c23;
+}
+
+.fa-cart-shopping{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa-cart-shopping:hover{
+    color: #7a5235;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+li{
+    list-style: none;
+    font-weight: 700;
+}
+
+li:hover{
+    text-decoration: underline;
+}
+
+i{
+    cursor: pointer;
+}
+
+a{
+    color: #5c3c23;
+    text-decoration: none;
+}
+
+hero{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+hero img{
+    height: 500px;
+}
+
+.text h1{
+    font-size: 60px;
+    color: #5c3c23;
+    margin-top: 50px;
+}
+
+.text p{
+    color: #5c3c23;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.text button {
+    padding: 15px;
+    margin-top: 60px;
+    border: 1px solid transparent;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #e3c5ad;
+    color: #5c3c23;
+    outline: 0;
+    cursor: pointer;
+}
+
+.text button:hover{
+    box-shadow: 0px 0px 13px 0px #5c3c23;
+    transition-duration: 0.5s;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 ;
+    padding: 10px;
+}
+
+.menu span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    text-align: center;
+}
+
+.menu span:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu h1 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.menu p {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.add-to-order {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #e3c5ad;
+    background-color: #5c3c23;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-order:hover {
+    background-color: #e3c5ad;
+    color: #5c3c23;
+}
+
+.contact {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact label {
+    text-align: left;
+    font-size: 15px;
+    color: #333;
+}
+
+.contact input,
+.contact textarea {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #e3c5ad;
+    background-color: #5c3c23;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #e3c5ad;
+    color: #5c3c23;
+}
+
+#login-btn{
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #e3c5ad;
+    background-color: #5c3c23;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+#logout-btn{
+    padding: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    color: #5c3c23;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+#login-btn:hover {
+    background-color: #e3c5ad;
+    color: #5c3c23;
+}
+
+/* Cart */
+.cart-page{
+    background-color: #e9cfbb;
+    width: 100%;
+    height: 100%;
+}
+
+.cart-container {
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.cart-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.item-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.item-details {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.item-name {
+    font-size: 20px;
+    margin: 0 0 5px;
+    color: #333;
+}
+
+.item-price {
+    font-size: 16px;
+    color: #555;
+}
+
+.item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-quantity {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.remove-item {
+    padding: 5px 10px;
+    color: #5c3c23;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-item:hover {
+    color: #7a5235;
+}
+
+.cart-footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #5c3c23;
+}
+
+.cart-footer h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.checkout-button {
+    padding: 10px 20px;
+    background-color: #5c3c23;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+    background-color: #7a5235;
+}
+
+.home-btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: #5c3c23;
+    cursor: pointer;
+}
