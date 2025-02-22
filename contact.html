@@ -14,6 +14,23 @@
     <title>Contact | GEC Cafe</title>
   </head>
   <body>
+    <button class="menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <button class="close-btn">
+      <i class="fa-solid fa-xmark close-btn"></i>
+    </button>
+    <div class="overlay"></div>
+    <div class="sidebar">
+      <ul>
+        <a href="index.html"><li>Home</li></a>
+        <a href="menu.html"><li>Menu</li></a>
+        <a href="contact.html"><li>Contact</li></a>
+        <a id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+        <li id="auth-buttons"></li>
+        <li id="profile-button" href="profile.html"></li>
+      </ul>
+    </div>
     <!-- Header -->
     <header>
       <h1>GEC Cafe</h1>
@@ -21,8 +38,11 @@
         <a href="index.html"><li>Home</li></a>
         <a href="menu.html"><li>Menu</li></a>
         <a href="contact.html"><li>Contact</li></a>
-        <a href="cart.html" id="cart-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="cart.html" id="cart-btn"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></a>
         <li id="auth-buttons"></li>
+        <li id="profile-button2" href="profile.html"></li>
       </ul>
     </header>
 
@@ -61,6 +81,6 @@
       </form>
     </section>
   </body>
-<script src="js/index.js"></script>
-<script src="js/contact.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/contact.js"></script>
 </html>

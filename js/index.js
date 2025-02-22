@@ -1,8 +1,14 @@
 const authButtons = document.getElementById("auth-buttons");
+const authButtons2 = document.getElementById("auth-buttons2");
+const profileBtn = document.getElementById("profile-button");
+const profileBtn2 = document.getElementById("profile-button2");
 const cartBtn = document.getElementById("cart-btn");
 
 if (localStorage.getItem("login")) {
   authButtons.innerHTML = `<button id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i></button>`;
+  authButtons2.innerHTML = `<button id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i></button>`;
+  profileBtn.innerHTML = `<button id="profile-btn""><i class="fa-solid fa-user"></i></button>`;
+  profileBtn2.innerHTML = `<button id="profile-btn""><i class="fa-solid fa-user"></i></button>`;
 } else {
   authButtons.innerHTML = `<button id="login-btn" onclick="window.location.href='login.html'">Login</button>`;
 }
@@ -35,4 +41,20 @@ cartBtn.addEventListener("click", () => {
     alert("Please login to view cart");
     window.location.href = "login.html";
   }
+});
+
+const menuBtn = document.querySelector(".menu-btn");
+const closeBtn = document.querySelector(".close-btn");
+const sidebar = document.querySelector(".sidebar");
+
+menuBtn.addEventListener("click", () => {
+  sidebar.classList.add("active");
+  menuBtn.style.display = "none";
+  closeBtn.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+  menuBtn.style.display = "block";
+  closeBtn.style.display = "none";
 });
