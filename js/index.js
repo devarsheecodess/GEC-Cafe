@@ -1,23 +1,23 @@
-const authButtons = document.getElementById("auth-buttons");
-const authButtons2 = document.getElementById("auth-buttons2");
-const profileBtn = document.getElementById("profile-button");
-const profileBtn2 = document.getElementById("profile-button2");
-const cartBtns = document.querySelectorAll(".cart-btn"); // ✅ Fixed
+const authButtons = document.querySelectorAll(".auth-buttons");
+const profileBtns_ = document.querySelectorAll(".profile-button");
+const cartBtns = document.querySelectorAll(".cart-btn");
 
+// Check if user is logged in
 if (localStorage.getItem("login")) {
-  authButtons.innerHTML = `<button class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i></button>`;
-  authButtons2.innerHTML = `<button class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i></button>`;
-  profileBtn.innerHTML = `<button class="profile-btn"><i class="fa-solid fa-user"></i></button>`;
-  profileBtn2.innerHTML = `<button class="profile-btn"><i class="fa-solid fa-user"></i></button>`;
+  authButtons.forEach((authButton) => {
+    authButton.innerHTML = `<button class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i></button>`;
+  });
+  profileBtns_.forEach((profileBtn) => {
+    profileBtn.innerHTML = `<button class="profile-btn"><i class="fa-solid fa-user"></i></button>`;
+  });
 } else {
-  authButtons.innerHTML = `<button class="login-btn" onclick="window.location.href='login.html'">Login</button>`;
-  authButtons2.innerHTML = `<button class="login-btn" onclick="window.location.href='login.html'">Login</button>`;
+  authButtons.forEach((authButton) => {
+    authButton.innerHTML = `<button class="login-btn" onclick="window.location.href='login.html'">Login</button>`;
+  });
 }
 
-// Select all logout buttons
+// Logout Button
 const logoutBtns = document.querySelectorAll(".logout-btn");
-const profileBtns = document.querySelectorAll(".profile-btn");
-
 logoutBtns.forEach((logoutBtn) => {
   logoutBtn.addEventListener("click", () => {
     try {
@@ -36,14 +36,16 @@ logoutBtns.forEach((logoutBtn) => {
   });
 });
 
+// Profile Button
+const profileBtns = document.querySelectorAll(".profile-btn");
 profileBtns.forEach((profileBtn) => {
   profileBtn.addEventListener("click", () => {
     window.location.href = "profile.html";
   });
 });
 
+// Cart Button
 cartBtns.forEach((cartBtn) => {
-  // ✅ Fixed
   cartBtn.addEventListener("click", () => {
     if (localStorage.getItem("login")) {
       window.location.href = "cart.html";
@@ -54,13 +56,12 @@ cartBtns.forEach((cartBtn) => {
   });
 });
 
-// Menu Toggle
+// Toggle menu (for small screens)
 const menuBtn = document.querySelector(".menu-btn");
 const closeBtn = document.querySelector(".close-btn");
 const sidebar = document.querySelector(".sidebar");
 
 if (menuBtn && closeBtn && sidebar) {
-  // ✅ Prevents errors if elements are missing
   menuBtn.addEventListener("click", () => {
     sidebar.classList.add("active");
     menuBtn.style.display = "none";

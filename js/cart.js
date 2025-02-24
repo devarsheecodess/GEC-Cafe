@@ -1,6 +1,7 @@
 const menuContainer = document.getElementById("menu-container");
-let menu = []; // Global menu variable
+let menu = [];
 
+// Get menu items
 const fetchMenu = async () => {
   try {
     const response = await fetch("../assets/menu-items.json");
@@ -30,6 +31,7 @@ let orderList = localStorage.getItem("order")
   : [];
 let total = Number(localStorage.getItem("total")) || 0;
 
+// Add item
 const addToOrder = (id) => {
   if (!localStorage.getItem("login")) {
     alert("Please login to add items to cart");
@@ -49,13 +51,12 @@ const addToOrder = (id) => {
 const cartItemsContainer = document.querySelector(".cart-items");
 const totalPriceElement = document.querySelector(".cart-footer h3");
 
-// Fetch order from LocalStorage
 const order = JSON.parse(localStorage.getItem("order")) || [];
 total = Number(localStorage.getItem("total")) || 0;
 
 // Function to render cart items
 const renderCart = () => {
-  cartItemsContainer.innerHTML = ""; // Clear previous items
+  cartItemsContainer.innerHTML = "";
 
   if (order.length === 0) {
     cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
@@ -98,8 +99,8 @@ const removeItem = (index) => {
 // Initial render
 renderCart();
 
+// Checkout order
 const checkoutButton = document.getElementById("checkout-btn");
-
 checkoutButton.addEventListener("click", () => {
   if (order.length === 0) {
     alert("Your cart is empty!");

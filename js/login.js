@@ -5,7 +5,7 @@ loginForm.addEventListener("submit", (e) => {
   const email = loginForm.username.value;
   const password = loginForm.password.value;
 
-  if (!email.includes("@")) {
+  if (!email.endsWith("@gec.ac.in")) {
     alert("Invalid email");
   } else if (password.length < 6) {
     alert("Password must be at least 6 characters long");

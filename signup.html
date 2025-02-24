@@ -22,10 +22,15 @@
       <form class="signup-form">
         <h2>Signup</h2>
         <label for="name">Name</label>
-        <input id="name" type="text" placeholder="Enter your name" />
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Enter your name"
+        />
 
         <label for="year">Year</label>
-        <select id="year">
+        <select id="year" name="year">
           <option value="" disabled selected>Select your Year</option>
           <option value="1">FE</option>
           <option value="2">SE</option>
@@ -34,7 +39,7 @@
         </select>
 
         <label for="department">Department</label>
-        <select id="department">
+        <select id="department" name="department">
           <option value="" disabled selected>Select your department</option>
           <option value="computer">Computer</option>
           <option value="it">Information Technology</option>
@@ -45,10 +50,20 @@
         </select>
 
         <label for="email">Email</label>
-        <input id="email" type="email" placeholder="Enter your email" />
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Enter your email"
+        />
 
         <label for="phone">Phone Number</label>
-        <input id="phone" type="tel" placeholder="Enter your phone number" />
+        <input
+          id="phone"
+          name="phone"
+          type="tel"
+          placeholder="Enter your phone number"
+        />
 
         <label for="password">Password</label>
         <input
@@ -57,10 +72,18 @@
           placeholder="Enter your password"
         />
 
+        <label for="password">Confirm Password</label>
+        <input
+          id="confirm_password"
+          type="confirm_password"
+          placeholder="Confirm your password"
+        />
+
         <p>Already have an account? <a href="login.html">Login</a></p>
 
         <button type="submit">Signup</button>
       </form>
     </div>
+    <script src="../js/signup.js"></script>
   </body>
 </html>
