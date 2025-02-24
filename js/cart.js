@@ -33,7 +33,7 @@ let total = Number(localStorage.getItem("total")) || 0;
 const addToOrder = (id) => {
   if (!localStorage.getItem("login")) {
     alert("Please login to add items to cart");
-    window.location.href = "html/login.html";
+    window.location.href = "login.html";
     return;
   }
   const item = menu.find((item) => item.id === id);
@@ -108,6 +108,6 @@ checkoutButton.addEventListener("click", () => {
     localStorage.removeItem("order");
     localStorage.removeItem("total");
     renderCart();
-    window.location.href = "html/index.html";
+    window.location.href = "index.html";
   }
 });

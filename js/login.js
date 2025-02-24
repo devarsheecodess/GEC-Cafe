@@ -11,7 +11,7 @@ loginForm.addEventListener("submit", (e) => {
     alert("Password must be at least 6 characters long");
   } else {
     alert("Logged in successfully");
-    window.location.href = "html/index.html";
+    window.location.href = "index.html";
     localStorage.setItem("login", true);
   }
 });
