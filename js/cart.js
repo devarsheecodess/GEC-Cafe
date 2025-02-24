@@ -3,7 +3,7 @@ let menu = []; // Global menu variable
 
 const fetchMenu = async () => {
   try {
-    const response = await fetch("menu-items.json");
+    const response = await fetch("../assets/menu-items.json");
     menu = await response.json(); // Store data globally
 
     menuContainer.innerHTML = menu
@@ -31,6 +31,11 @@ let orderList = localStorage.getItem("order")
 let total = Number(localStorage.getItem("total")) || 0;
 
 const addToOrder = (id) => {
+  if (!localStorage.getItem("login")) {
+    alert("Please login to add items to cart");
+    window.location.href = "login.html";
+    return;
+  }
   const item = menu.find((item) => item.id === id);
   if (item) {
     orderList.push(item);

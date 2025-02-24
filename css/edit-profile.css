@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background-color: #f5f6fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2d3436;
+  font-size: 24px;
+}
+
+.edit-field {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.edit-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #636e72;
+  font-size: 16px;
+}
+
+.edit-field input {
+  width: 100%;
+  padding: 12px 40px;
+  border: 1px solid #dfe6e9;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #2d3436;
+  background-color: white;
+}
+
+.edit-field input::placeholder {
+  color: #b2bec3;
+}
+
+.edit-field input:focus {
+  outline: none;
+  border-color: #5c3c23;
+  box-shadow: 0 0 0 2px rgba(9, 132, 227, 0.1);
+}
+
+/* Icon styling */
+.edit-field i {
+  position: absolute;
+  left: 12px;
+  top: 57px;
+  transform: translateY(-50%);
+  color: #636e72;
+  font-size: 18px;
+}
+
+/* Specific styling for password toggle icon */
+.edit-field .fa-eye,
+.edit-field .fa-eye-slash {
+  left: auto;
+  right: 12px;
+  cursor: pointer;
+}
+
+/* Save button styling */
+.button {
+  width: 100%;
+  padding: 14px;
+  background: #5c3c23;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background: #0873c4;
+}
+
+/* Making input fields display their icons properly */
+.edit-field {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fix for tumblr icon alignment */
+.tumblr-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #636e72;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 20px;
+  }
+
+  .edit-field input {
+    padding: 10px 35px;
+    font-size: 14px;
+  }
+
+  .edit-field label {
+    font-size: 14px;
+  }
+
+  .button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+.home-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: #5c3c23;
+  cursor: pointer;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Signup</title>
+  </head>
+  <body>
+    <button class="home-btn" onclick="window.location.href='index.html'">
+      <i class="fa-solid fa-house"></i>
+    </button>
+
+    <div class="signup-container">
+      <form class="signup-form">
+        <h2>Signup</h2>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Enter your name" />
+
+        <label for="year">Year</label>
+        <select id="year">
+          <option value="" disabled selected>Select your Year</option>
+          <option value="1">FE</option>
+          <option value="2">SE</option>
+          <option value="3">TE</option>
+          <option value="4">BE</option>
+        </select>
+
+        <label for="department">Department</label>
+        <select id="department">
+          <option value="" disabled selected>Select your department</option>
+          <option value="computer">Computer</option>
+          <option value="it">Information Technology</option>
+          <option value="electronics">Electrical and Electronics</option>
+          <option value="mechanical">Mechanical</option>
+          <option value="civil">Civil</option>
+          <option value="biotech">VLSI</option>
+        </select>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter your email" />
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="tel" placeholder="Enter your phone number" />
+
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter your password"
+        />
+
+        <p>Already have an account? <a href="login.html">Login</a></p>
+
+        <button type="submit">Signup</button>
+      </form>
+    </div>
+  </body>
+</html>

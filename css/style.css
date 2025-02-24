@@ -396,7 +396,7 @@ hero img {
   color: #5c3c23;
 }
 
-#login-btn {
+.login-btn {
   padding: 10px 20px;
   font-size: 15px;
   color: #e3c5ad;
@@ -409,7 +409,7 @@ hero img {
   font-weight: 600;
 }
 
-#logout-btn {
+.logout-btn {
   padding: 10px;
   font-size: 20px;
   background-color: transparent;
@@ -422,7 +422,7 @@ hero img {
   font-weight: 600;
 }
 
-#login-btn:hover {
+.login-btn:hover {
   background-color: #e3c5ad;
   color: #5c3c23;
 }
@@ -553,7 +553,7 @@ hero img {
   cursor: pointer;
 }
 
-#profile-btn {
+.profile-btn {
   font-size: 20px;
   color: #5c3c23;
   background-color: transparent;

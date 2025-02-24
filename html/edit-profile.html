@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/edit-profile.css" />
+  </head>
+  <body>
+    <button class="home-btn" onclick="window.location.href='profile.html'">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <div class="profile-card">
+      <h2 class="section-title">Edit Profile</h2>
+      <form class="edit-section">
+        <div class="edit-field">
+          <label>Full Name</label>
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            placeholder="Enter your full name"
+            value="Devarshee Gaunekar"
+          />
+        </div>
+
+        <div class="edit-field">
+          <label>Email</label>
+          <i class="fas fa-envelope"></i>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value="dg@gec.ac.in"
+          />
+        </div>
+
+        <div class="edit-field">
+          <label>Phone Number</label>
+          <i class="fas fa-phone"></i>
+          <input
+            type="tel"
+            placeholder="Enter your phone number"
+            value="+91 8767121606"
+          />
+        </div>
+
+        <div class="edit-field">
+          <label>Password</label>
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Enter new password" />
+          <i class="fas fa-eye password-toggle"></i>
+        </div>
+
+        <div class="edit-field">
+          <label>Confirm Password</label>
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Confirm new password" />
+          <i class="fas fa-eye password-toggle"></i>
+        </div>
+
+        <button type="submit" class="button">Save Changes</button>
+      </form>
+    </div>
+
+    <script>
+      // Toggle password visibility
+      document.querySelectorAll(".password-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", (e) => {
+          const input = e.target.previousElementSibling;
+          if (input.type === "password") {
+            input.type = "text";
+            e.target.classList.remove("fa-eye");
+            e.target.classList.add("fa-eye-slash");
+          } else {
+            input.type = "password";
+            e.target.classList.remove("fa-eye-slash");
+            e.target.classList.add("fa-eye");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
