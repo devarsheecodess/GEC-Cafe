@@ -25,20 +25,20 @@ logoutBtns.forEach((logoutBtn) => {
       if (cf) {
         localStorage.removeItem("login");
         alert("Logged out successfully");
-        window.location.href = "index.html";
+        window.location.href = "html/index.html";
       }
     } catch (e) {
       alert("An error occurred");
       localStorage.removeItem("login");
     } finally {
-      window.location.href = "index.html";
+      window.location.href = "html/index.html";
     }
   });
 });
 
 profileBtns.forEach((profileBtn) => {
   profileBtn.addEventListener("click", () => {
-    window.location.href = "profile.html";
+    window.location.href = "html/profile.html";
   });
 });
 
@@ -46,10 +46,10 @@ cartBtns.forEach((cartBtn) => {
   // ✅ Fixed
   cartBtn.addEventListener("click", () => {
     if (localStorage.getItem("login")) {
-      window.location.href = "cart.html";
+      window.location.href = "html/cart.html";
     } else {
       alert("Please login to view cart");
-      window.location.href = "login.html";
+      window.location.href = "html/login.html";
     }
   });
 });
