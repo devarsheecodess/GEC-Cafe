@@ -1,9 +1,7 @@
-const loginForm = document.getElementById("login-form");
-
-loginForm.addEventListener("submit", (e) => {
+$("#login-form").on("submit", function (e) {
   e.preventDefault();
-  const email = loginForm.username.value;
-  const password = loginForm.password.value;
+  const email = $(this).find("[name='email']").val();
+  const password = $(this).find("[name='password']").val();
 
   if (!email.endsWith("@gec.ac.in")) {
     alert("Invalid email");

@@ -1,15 +1,13 @@
-const signupForm = document.querySelector(".signup-form");
-
-signupForm.addEventListener("submit", (e) => {
+$(".signup-form").on("submit", function (e) {
   e.preventDefault();
   try {
-    const name = signupForm.name.value;
-    const year = signupForm.year.value;
-    const department = signupForm.department.value;
-    const email = signupForm.email.value;
-    const phone = signupForm.phone.value;
-    const password = signupForm.password.value;
-    const confirmPassword = signupForm.confirm_password.value;
+    const name = $(this).find("[name='name']").val();
+    const year = $(this).find("[name='year']").val();
+    const department = $(this).find("[name='department']").val();
+    const email = $(this).find("[name='email']").val();
+    const phone = $(this).find("[name='phone']").val();
+    const password = $(this).find("[name='password']").val();
+    const confirmPassword = $(this).find("[name='confirm_password']").val();
 
     if (
       !name ||

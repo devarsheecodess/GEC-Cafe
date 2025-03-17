@@ -1,11 +1,9 @@
-const contactForm = document.getElementById("contact-form");
-
-contactForm.addEventListener("submit", function (event) {
+$("#contact-form").on("submit", function (event) {
   event.preventDefault();
   try {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+    const name = $("#name").val();
+    const email = $("#email").val();
+    const message = $("#message").val();
 
     if (!email.includes("@")) {
       throw new Error("Invalid email");
