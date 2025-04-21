@@ -4,7 +4,7 @@ let menu = [];
 // Get menu items
 const fetchMenu = async () => {
   try {
-    const response = await fetch("../assets/menu-items.json");
+    const response = await fetch("Backend/menu.php");
     menu = await response.json(); // Store data globally
 
     menuContainer.innerHTML = menu

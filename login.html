@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="css/login.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -14,34 +14,50 @@
     <title>Login</title>
   </head>
   <body>
+    <!-- Home button to redirect to index.html -->
     <button class="home-btn" onclick="window.location.href='index.html'">
       <i class="fa-solid fa-house"></i>
     </button>
+
     <div class="login-container">
-      <form class="login-form" id="login-form">
+      <form
+        class="login-form"
+        id="login-form"
+        method="POST"
+        action="Backend/login.php"
+      >
         <h2>Login</h2>
-        <label for="username">Email</label>
+
+        <!-- Email input -->
+        <label for="email">Email</label>
         <input
-          id="username"
-          type="text"
+          id="email"
+          type="email"
           name="email"
-          placeholder="Enter username"
+          placeholder="Enter your email"
+          required
         />
 
+        <!-- Password input -->
         <label for="password">Password</label>
         <input
           id="password"
           type="password"
           name="password"
-          placeholder="Enter password"
+          placeholder="Enter your password"
+          required
         />
 
-        <p>Don't have an account? <a href="signup.html">signup</a></p>
+        <!-- Signup link for new users -->
+        <p>Don't have an account? <a href="signup.html">Signup</a></p>
 
+        <!-- Submit button -->
         <button type="submit">Login</button>
       </form>
     </div>
+
+    <!-- jQuery and custom script -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="../js/login.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>

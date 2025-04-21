@@ -6,7 +6,7 @@ $("#contact-form").on("submit", function (event) {
     const message = $("#message").val();
 
     if (!email.includes("@")) {
-      throw new Error("Invalid email");
+      alert("Invalid email");
     }
 
     const data = {

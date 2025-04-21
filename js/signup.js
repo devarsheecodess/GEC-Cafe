@@ -1,5 +1,5 @@
 $(".signup-form").on("submit", function (e) {
-  e.preventDefault();
+  // e.preventDefault();
   try {
     const name = $(this).find("[name='name']").val();
     const year = $(this).find("[name='year']").val();
@@ -34,17 +34,21 @@ $(".signup-form").on("submit", function (e) {
       alert("Passwords do not match");
       return;
     }
-    const user = {
+
+    // Create user data object for sending to server
+    const userData = {
       name,
       year,
       department,
       email,
       phone,
       password,
+      confirm_password: confirmPassword,
     };
-    alert("Signed up successfully");
-    window.location.href = "login.html";
+
+    console.log("User Data:", userData);
   } catch (error) {
     console.error("Error:", error);
+    alert("An unexpected error occurred.");
   }
 });

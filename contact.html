@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -47,7 +47,11 @@
     <!-- Contact Section -->
     <section class="contact">
       <h2>Contact Us</h2>
-      <form id="contact-form">
+      <form
+        id="contact-form"
+        method="POST"
+        action="https://formspree.io/f/xgvkwrlb"
+      >
         <label for="name">Name</label>
         <input
           type="text"
@@ -75,11 +79,15 @@
           required
         ></textarea>
 
+        <!-- Honeypot for spam protection -->
+        <input type="text" name="_gotcha" style="display: none" />
+
         <button type="submit">Send Message</button>
       </form>
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/contact.js"></script>
   </body>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="../js/index.js"></script>
-  <script src="../js/contact.js"></script>
 </html>
